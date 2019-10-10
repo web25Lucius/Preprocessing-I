@@ -49,6 +49,24 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+&:hover(){
+	background-color: yellow;  
+}
+
+.flex(){
+	display: flex;
+	justify-content: center; 
+}
+
+.border(){
+	border: 2px gold solid; 
+}
+
+@bgColor:#e9ecf7; 
+@mobile: (max-width 500px); 
+
+
 * {
     box-sizing: border-box;
 }
@@ -57,23 +75,46 @@ html, body {
 	height: 100%;
 	font-size: 62.5%; 
 	font-family: 'Aleo', serif; 
- }
+	
+
+	//here
+}
+
+
+
+header {
+	@media (max-width: 500px) {
+		.flex(); 
+		font-size: 12pt; 
+		margin: auto; 
+		}
+	}
+
 
 nav {
 	display: flex; 
 	justify-content: flex-end; 
 	padding: 3%; 
+	.border(); 
+	background-color: gold; 
+		@media (max-width: 500px) {
+			nav {
+				justify-content: center;
+				background-color: #e8ed9a; 
+				}
+			}
+	 
+	}
+
+
+
+nav {
+	a {
+		font-size: 2rem; 
+		padding: 2%; 
+		}
 }
 
-nav a {
-	font-size: 2rem; 
-	padding: 2%; 
-}
-
-
-
-
-@bgColor:#e9ecf7; 
 
  
 .container {
@@ -113,17 +154,19 @@ nav a {
 	
 }
 
-h2 #bigFont {
-	font-size: 84pt; 
-}
-	
 
-.headshot {
-	 
-	width: 550px; 
-	height: auto;  
-		
-}
+.container{
+	.wrapperPic{
+		.headshot {
+			width: 550px; 
+			height: auto;  
+				@media (max-width: 500px) {
+					display: none; 
+						}
+				}
+			}
+		}	
+
 
 
 .endPage {
@@ -142,5 +185,17 @@ p {
 	margin: auto;
 	line-height: 2.5rem;
 	padding: 3%; 
+	.hover(); 
 
+}
+
+
+
+.skill {
+	font-size: 4em; 
+
+	.flex(); 
+	.proof{
+		.flex(); 
+		}
 }
