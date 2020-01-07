@@ -136,6 +136,14 @@ body {
   font-size: 62.5%;
   font-family: 'Aleo', serif;
 }
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: center;
+    font-size: 12pt;
+    margin: auto;
+  }
+}
 nav {
   display: flex;
   justify-content: flex-end;
@@ -143,10 +151,21 @@ nav {
   border: 2px gold solid;
   background-color: gold;
 }
-nav a {
+@media (max-width: 500px) {
+  nav nav {
+    justify-content: center;
+    background-color: #e8ed9a;
+  }
+}
+.nav a {
   font-size: 2rem;
   padding: 2%;
-  background-color: yellow;
+}
+.nav a:hover {
+  background-color: #daffee;
+}
+.nav a:focus {
+  color: #4b4242;
 }
 .container {
   display: flex;
@@ -178,9 +197,14 @@ nav a {
   height: auto;
   padding: 3%;
 }
-.headshot {
+.container .wrapperPic .headshot {
   width: 550px;
   height: auto;
+}
+@media (max-width: 500px) {
+  .container .wrapperPic .headshot {
+    display: none;
+  }
 }
 .endPage {
   display: inline-block;
@@ -195,7 +219,6 @@ p {
   margin: auto;
   line-height: 2.5rem;
   padding: 3%;
-  background-color: yellow;
 }
 .skill {
   font-size: 4em;

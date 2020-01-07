@@ -50,9 +50,7 @@ table {
 
 /* Set every element's box-sizing to border-box */
 
-&:hover(){
-	background-color: yellow;  
-}
+
 
 .flex(){
 	display: flex;
@@ -108,12 +106,17 @@ nav {
 
 
 
-nav {
-	a {
+.nav a {
 		font-size: 2rem; 
 		padding: 2%; 
+			&:hover {
+			background-color: #daffee;  
+			}
+			&:focus {
+				color: #4b4242; 
+			}
 		}
-}
+
 
 
  
@@ -185,9 +188,10 @@ p {
 	margin: auto;
 	line-height: 2.5rem;
 	padding: 3%; 
-	.hover(); 
 
-}
+	}; 
+
+
 
 
 
